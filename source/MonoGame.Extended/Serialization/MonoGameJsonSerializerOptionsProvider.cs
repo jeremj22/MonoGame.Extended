@@ -11,6 +11,7 @@ public static class MonoGameJsonSerializerOptionsProvider
     {
         var options = new JsonSerializerOptions
         {
+            AllowTrailingCommas = true,
             WriteIndented = true,
             DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase
