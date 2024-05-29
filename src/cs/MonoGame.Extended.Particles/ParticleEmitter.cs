@@ -149,8 +149,7 @@ namespace MonoGame.Extended.Particles
             {
                 var particle = iterator.Next();
                 particle->Age = (_totalSeconds - particle->Inception) / _lifeSpanSeconds;
-                particle->Offset = particle->Offset + particle->Velocity * elapsedSeconds;
-                particle->Position = position + particle->Offset;
+                particle->Position = particle->Position + particle->Velocity * elapsedSeconds;
             }
 
             ModifierExecutionStrategy.ExecuteModifiers(Modifiers, elapsedSeconds, iterator);
@@ -190,7 +189,6 @@ namespace MonoGame.Extended.Particles
                 particle->Inception = _totalSeconds;
                 particle->Position += position;
                 particle->TriggerPos = position;
-                particle->Offset = Vector2.Zero;
 
                 var speed = _random.NextSingle(Parameters.Speed);
 
