@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="$(ArtifactsPath)/bin/MonoGame.Extended.Content.Pipeline/release/*.dll" Pack="True" PackagePath="tools" />
+    <Content Include="bin\net6.0\*.dll" Pack="True" PackagePath="tools\" />
   </ItemGroup>
 
   <PropertyGroup>
